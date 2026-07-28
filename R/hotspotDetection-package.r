@@ -1,0 +1,31 @@
+#' Hotspot detection
+#'
+#' The \pkg{pphotspot} package provides implementation of the detection
+#' of hotspots on a linear network as proposed by Mrkvička et al. (2025).
+#'
+#'
+#' @section Key functions in \pkg{GET}:
+#' \itemize{
+#'            \item \code{\link{hotspots.poislpp}} - Hotspot detection for Poisson point process
+#'            \item \code{\link{hotspots.MatClustlpp}} - Hotspot detection for Matern point process
+#'            \item \code{\link{pois.lppm}} - Fit a Poisson point process model to a point pattern dataset on a linear network
+#'            \item \code{\link{MatClust.lppm}} - Fit a Matern cluster point process to a point pattern dataset on a linear network
+#'            \item \code{\link{rMatClustlpp}} - Simulating the Matern cluster process on a linear network
+#'            \item \code{\link{roadcrash}} - A data set of road crashes
+#' }
+#'
+#' @section Acknowledgements:
+#'
+#' Mikko Kuronen has helped to made the code faster.
+#'
+#' @author
+#' Mari Myllymäki (mari.myllymaki@@luke.fi, mari.j.myllymaki@@gmail.com),
+#' Tomáš Mrkvička (mrkvicka.toma@@gmail.com), and
+#' Michal Konopa (MKonopa@@seznam.cz)
+#'
+#' @references
+#' Mrkvička et al. (2025). Where are the Real Hotspots of Road Crashes? An Innovative Approach to the Road Crash Hotspot Detection by Filtering Out the Effect of Covariates. DOI: 10.2139/ssrn.5337003
+#'
+#' @name pphotspot-package
+#' @aliases pphotspot pphotspot-package
+NULL
