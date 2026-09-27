@@ -1,6 +1,6 @@
 Package: pphotspot
-Version: 0.1-2
-Date: 2026-07-18
+Version: 0.1-3
+Date: 2026-09-27
 Title: Hotspot Detection of Point Events on a Linear Network
 Encoding: UTF-8
 Authors@R: c(
@@ -24,7 +24,7 @@ URL: https://github.com/myllym/pphotspot
 BugReports: https://github.com/myllym/pphotspot/issues
 VignetteBuilder: R.rsp
 NeedsCompilation: no
-Packaged: 2026-07-18 20:13:18 UTC; marmylly
+Packaged: 2026-09-27 17:26:25 UTC; marmylly
 Author: Mari Myllymäki [aut, cre] (ORCID:
     <https://orcid.org/0000-0002-2713-7088>),
   Michal Konopa [aut],
@@ -32,4 +32,4 @@ Author: Mari Myllymäki [aut, cre] (ORCID:
   Mikko Kuronen [ctb]
 Depends: R (>= 2.10)
 Repository: CRAN
-Date/Publication: 2026-07-28 16:10:02 UTC
+Date/Publication: 2026-09-27 22:50:09 UTC

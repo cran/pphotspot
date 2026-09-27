@@ -52,12 +52,22 @@ rMatClustlpp <- function(Centers, R, alpha, LL, check_vol=FALSE) {
   bufs <- st_buffer(cs, R, nQuadSegs = 8)
   LN1s <- st_intersection(bufs, sf::st_union(LN))
   stopifnot(length(LN1s)==length(Centers$data$x))
-  for(p in 1:length(Centers$data$x)) {
-    LN1 <- LN1s[p]
-    LN1 <- unlist(LN1) # LN1 contains line segments with exactly 4 numbers each
-    LL1 <- psp(LN1[1:4 == 1], LN1[1:4 == 3],
-               LN1[1:4 == 2], LN1[1:4 == 4],
-               window=Window(LL), check=FALSE)
+  for (p in seq_along(Centers$data$x)) {
+    segment_matrix <- geometry_to_segments(LN1s[p])
+
+    if (nrow(segment_matrix) == 0L) {
+      next
+    }
+
+    LL1 <- psp(
+      segment_matrix[, "x0"],
+      segment_matrix[, "y0"],
+      segment_matrix[, "x1"],
+      segment_matrix[, "y1"],
+      window = Window(LL),
+      check = FALSE
+    )
+
     vol <- sum(lengths_psp(LL1))
     if(check_vol) {
       BBCOutD_ss <- disc(radius=R, centre=c(Centers$data$x[p],
